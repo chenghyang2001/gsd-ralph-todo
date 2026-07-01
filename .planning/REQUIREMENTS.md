@@ -50,23 +50,23 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 | ------------- | ------- | -------- |
-| CMD-01 | — | Pending |
-| CMD-02 | — | Pending |
-| CMD-03 | — | Pending |
-| CMD-04 | — | Pending |
-| DATA-01 | — | Pending |
-| DATA-02 | — | Pending |
-| ERR-01 | — | Pending |
-| ERR-02 | — | Pending |
-| ERR-03 | — | Pending |
-| TEST-01 | — | Pending |
+| CMD-01 | Phase 1 | Planned |
+| CMD-02 | Phase 1 | Planned |
+| CMD-03 | Phase 1 | Planned |
+| CMD-04 | Phase 1 | Planned |
+| DATA-01 | Phase 1 | Planned |
+| DATA-02 | Phase 1 | Planned |
+| ERR-01 | Phase 1 | Planned |
+| ERR-02 | Phase 1 | Planned |
+| ERR-03 | Phase 1 | Planned |
+| TEST-01 | Phase 1 | Planned |
 
 **Coverage:**
 
 - v1 requirements: 10 total
-- Mapped to phases: 0 ⚠️ (roadmapper 填寫)
-- Unmapped: 10
+- Mapped to phases: 10 ✓ (fully mapped)
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-07-02*
-*Last updated: 2026-07-02 after initial definition*
+*Last updated: 2026-07-02 after roadmap creation (Phase 1 covers all v1 requirements)*
