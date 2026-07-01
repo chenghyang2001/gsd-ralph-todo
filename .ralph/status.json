@@ -1,0 +1,13 @@
+{
+    "timestamp": "2026-07-01T21:27:38+00:00",
+    "loop_count": 4,
+    "calls_made_this_hour": 3,
+    "max_calls_per_hour": 100,
+    "tokens_used_this_hour": 12641,
+    "max_tokens_per_hour": 0,
+    "last_action": "graceful_exit",
+    "status": "completed",
+    "exit_reason": "plan_complete",
+    "sandbox": {"provider": "none"},
+    "next_reset": "22:27:38"
+}
