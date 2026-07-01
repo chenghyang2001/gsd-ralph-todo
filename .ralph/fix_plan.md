@@ -9,8 +9,8 @@
 ## Priority 2：補完命令（done + rm）
 
 - [x] 擴充 test_todo.py：done 標成 [x] 且跨程序持久化、rm 移除且持久化、done 999 / rm 999（不存在的 id）→ 退出碼 1（P1 撰寫時已一併寫入，紅燈確認）
-- [ ] 實作 cmd_done / cmd_rm（無效 id → stderr + exit 1；沿用 load_tasks/save_tasks），註冊子命令（id 用 type=int）
-- [ ] 全套綠：`python3 -m pytest test_todo.py -q` 退出碼 0（4 命令 + 邊界全過）
+- [x] 實作 cmd_done / cmd_rm（無效 id → stderr + exit 1；沿用 load_tasks/save_tasks），註冊子命令（id 用 type=int）
+- [x] 全套綠：`python3 -m pytest test_todo.py -q` 退出碼 0（4 命令 + 邊界全過，11 passed）
 
 ## 硬約束（不可違反）
 

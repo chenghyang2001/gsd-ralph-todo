@@ -41,6 +41,26 @@ def cmd_list():
         print(f"[{mark}] {t['id']} {t['text']}")
 
 
+def cmd_done(task_id):
+    tasks = load_tasks()
+    for t in tasks:
+        if t["id"] == task_id:
+            t["done"] = True
+            save_tasks(tasks)
+            return
+    print(f"error: no task with id {task_id}", file=sys.stderr)
+    sys.exit(1)
+
+
+def cmd_rm(task_id):
+    tasks = load_tasks()
+    remaining = [t for t in tasks if t["id"] != task_id]
+    if len(remaining) == len(tasks):
+        print(f"error: no task with id {task_id}", file=sys.stderr)
+        sys.exit(1)
+    save_tasks(remaining)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(prog="todo")
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -50,11 +70,21 @@ def main(argv=None):
 
     sub.add_parser("list", help="list all tasks")
 
+    p_done = sub.add_parser("done", help="mark a task as done")
+    p_done.add_argument("id", type=int)
+
+    p_rm = sub.add_parser("rm", help="remove a task")
+    p_rm.add_argument("id", type=int)
+
     args = parser.parse_args(argv)
     if args.cmd == "add":
         cmd_add(args.text)
     elif args.cmd == "list":
         cmd_list()
+    elif args.cmd == "done":
+        cmd_done(args.id)
+    elif args.cmd == "rm":
+        cmd_rm(args.id)
 
 
 if __name__ == "__main__":
