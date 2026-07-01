@@ -30,11 +30,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. 使用者執行 `done <id>` 與 `rm <id>` 可分別標記完成與刪除指定任務，且變更持久化於 `tasks.json`（CMD-03, CMD-04, DATA-02）
   4. 對無效 id 執行 `done`/`rm`、對 `add` 傳入空字串、或 `tasks.json` 不存在時，程式分別回報錯誤（exit code 1）或視為空清單而不崩潰（ERR-01, ERR-02, ERR-03）
   5. `pytest test_todo.py` 執行全綠，涵蓋四指令與上述所有邊界情況（TEST-01）
-**Plans**: TBD
+**Plans**: 2 plans (2 waves — sequential, both touch todo.py + test_todo.py)
 
 Plans:
 
-- [ ] 01-01: TBD (refined during planning)
+- [ ] 01-01-PLAN.md — Walking Skeleton: add + list + JSON persistence + empty-string/missing-file handling (CMD-01, CMD-02, DATA-01, DATA-02, ERR-02, ERR-03)
+- [ ] 01-02-PLAN.md — done + rm + invalid-id error handling; full pytest suite green (CMD-03, CMD-04, ERR-01, DATA-02, TEST-01)
 
 ## Progress
 
@@ -43,4 +44,4 @@ Phases execute in numeric order: 1
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Core Todo CLI | 0/TBD | Not started | - |
+| 1. Core Todo CLI | 0/2 | Not started | - |
