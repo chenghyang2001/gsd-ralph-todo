@@ -10,3 +10,9 @@ __pycache__/
 # Claude Code / 排程 harness session 檔（非專案內容）
 .claude/session-state.md
 .claude/scheduled_tasks.lock
+
+# 當機/垃圾檔（不入版控）
+*.stackdump
+core
+*.core
+*.dmp
